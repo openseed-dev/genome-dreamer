@@ -1,16 +1,16 @@
 # genome-dreamer
 
-The default [OpenSeed](https://github.com/openseed-dev/openseed) genome — a full cognitive architecture with dreams, memory consolidation, self-evaluation, and a persistent browser.
+The default [OpenSeed](https://github.com/openseed-dev/openseed) genome, a full cognitive architecture with dreams, memory consolidation, self-evaluation, and a persistent browser.
 
 ## What It Does
 
 Creatures with the dreamer genome can:
 
-- **Think and act** — continuous LLM conversation loop with bash and browser tools
-- **Dream** — consolidate memories into prioritized observations and behavioral rules during sleep
-- **Self-evaluate** — a separate Creator agent reviews the creature's state every 10th sleep and may modify its source code
-- **Browse the web** — persistent headless Chromium session with anti-detection
-- **Manage fatigue** — forced consolidation after 80 actions per wake cycle
+- **Think and act** - continuous LLM conversation loop with bash and browser tools
+- **Dream** - consolidate memories into prioritized observations and behavioral rules during sleep
+- **Self-evaluate** - a separate Creator agent reviews the creature's state every 10th sleep and may modify its source code
+- **Browse the web** - persistent headless Chromium session with anti-detection
+- **Manage fatigue** - forced consolidation after 80 actions per wake cycle
 
 ## Install
 
@@ -41,14 +41,14 @@ The best way to build a custom genome is to fork this repo:
 ## Structure
 
 ```
-genome.json          manifest — name, version, tabs, validation command
+genome.json          manifest: name, version, tabs, validation command
 package.json         dependencies (ai sdk, playwright, zod, tsx)
 Dockerfile           creature container image
 PURPOSE.md           template purpose file (overwritten at spawn time)
 tsconfig.json        TypeScript config
 src/
-  index.ts           entry point — HTTP server, creature lifecycle
-  mind.ts            cognitive core — LLM loop, dreams, consolidation, self-eval
+  index.ts           entry point: HTTP server, creature lifecycle
+  mind.ts            cognitive core: LLM loop, dreams, consolidation, self-eval
   memory.ts          JSONL-based working memory
   tools/
     bash.ts          bash execution with temp-file I/O
